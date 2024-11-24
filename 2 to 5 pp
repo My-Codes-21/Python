@@ -1,0 +1,519 @@
+a) Source Code: Python Program to Check if a Number is Positive, Negative or 0 Using 
+
+if...elif...else
+
+num = float(input("Enter a number: "))
+
+if num > 0:
+
+  print("Positive number")
+
+elif num == 0:
+
+  print("Zero")
+
+else:
+
+  print("Negative number")
+
+b) Source Code: Write a python program to find largest of three numbers using the logical 
+
+operator
+
+num1 = int(input("Enter first number: "))
+
+num2 = int(input("Enter second number: "))
+
+num3 = int(input("Enter third number: "))
+
+if (num1 > num2) and (num1 > num3):
+
+ largest = num1
+
+elif (num2 > num1) and (num2 > num3):
+
+ largest = num2
+
+else:
+
+ largest = num3
+
+print("The largest number is",largest)
+
+
+
+c) Source Code - Python program to swap two variables 
+# To take inputs from the user
+x = input('Enter value of x: ')
+y = input('Enter value of y: ')
+# create a temporary variable and swap the values
+temp = x
+x = y
+y = temp
+print('The value of x after swapping: {}'.format(x))
+print('The value of y after swapping: {}'.format(y))
+
+
+d) Source Code: Python program to display all the prime numbers in an interval
+
+#lower = int(input ("Please, Enter the Lowest Range Value: ")) 
+
+#upper = int(input ("Please, Enter the Upper Range Value: ")) 
+
+lower = 2
+
+upper = 15
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+
+ # all prime numbers are greater than 1
+
+ if num > 1:
+
+ for i in range(2, num):
+
+ if (num % i) == 0:
+
+ break
+
+ else:
+
+ print(num)
+
+
+a) Source Code - python program to check whether the given string is palindrome or not.
+
+def isPalindrome(s):
+
+ return s == s[::-1] 
+
+# Driver code
+
+s = "malayalam"
+
+ans = isPalindrome(s)
+
+if ans:
+
+print("Yes")
+
+else:
+
+print("No")
+
+
+
+b) Source code - Write a program to create, concatenate and print a string and accessing 
+
+substring from a given string.
+
+# Python program to show string concatenation 
+
+ 
+
+# Defining strings 
+
+str1 = "Welcome to" 
+
+str2 = "Python Programming Lab 😊 " 
+
+ 
+
+# + Operator is used to strings concatenation 
+
+str3 = str1 + str2 
+
+print("The new concatenated string is " + str3) # Printing the new combined string 
+
+str4 = "abc"
+
+# printing original string 
+
+print("The original string is : " + str4)
+
+ 
+
+# Get all substrings of string
+
+# Using list comprehension + string slicing
+
+res = [str4[i: j] for i in range(len(str4))
+
+ for j in range(i + 1, len(str4) + 1)]
+
+ 
+
+# printing result 
+
+print("All substrings of string are : " + str(res))
+
+
+
+Source Code: Write a python program to demonstrate how to pass parameters to a function 
+
+# Function definition is here
+
+defprintme( str):
+
+#"This prints a passed string into this function"
+
+ print(str)
+
+ return;
+
+# Now you can call printme function
+
+printme("I'm first call to user defined function!")
+
+printme("Again second call to the same function")
+
+
+
+Source Code: Write a python program to demonstrate arguments in function 
+
+print("Argument Example")
+
+defmy_function(fname):
+
+print(fname + " khan")
+
+my_function("Saba")
+
+my_function("Salman")
+
+my_function("Zohran")
+
+Source Code –A program to illustrate the scope of a variable inside a function.
+
+# This function has a variable with 
+
+# name same as s. 
+
+deff():
+
+ # local scope 
+
+ s = "Me too."
+
+ print(s) 
+
+# Global scope 
+
+s = "I love Python" 
+
+f() 
+
+print(s)
+
+defmy_func():
+
+ # local scope 
+
+ x = 10
+
+print("Value inside function:",x)
+
+# Global scope
+x = 20
+
+my_func()
+
+print("Value outside function:",x)
+
+Source Code –A program to illustrate the Recursion
+
+def factorial(x):
+
+ """This is a recursive function
+
+ to find the factorial of an integer"""
+
+ if x == 1:
+
+ return 1
+
+ else:
+
+ return (x * factorial(x-1))
+
+num = 3
+
+print("The factorial of", num, "is", factorial(num))
+
+
+a) Source Code - Write a program to create, append, and remove lists in python.
+print("Create a list")
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+print("Add an item at a specified index")
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+print("Get the length of a list")
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+print("Add an item to the end of the a list")
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+print("Remove an item")
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+print("Remove the last item")
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+print("Remove an item at a specified index")
+
+thislist = ["apple", "banana", "cherry"]
+
+del thislist[0]
+
+print(thislist)
+
+print("Empty list")
+
+thislist = ["apple", "banana", "cherry"]
+
+thislist.clear()
+
+print(thislist)
+
+
+b) Source Code - Creating Python Dictionary, accesing items , use get() method , change 
+
+values & Len()
+
+print("1.Create and print a dictionary:")
+
+thisdict = {
+
+ "brand": "Ford",
+
+ "model": "Mustang",
+
+ "year": 1964
+
+}
+
+print(thisdict)
+
+print("2. Accessing Items:”)
+
+# Get the value of the "model" key:
+
+thisdict = {
+
+ "brand": "Ford",
+
+ "model": "Mustang",
+
+ "year": 1964
+
+}
+
+x = thisdict["model"]
+
+print("3. Using get() Method:")
+
+#There is also a method called get() that will give you the same result:
+
+print("Get the value of the model key:")
+
+x = thisdict.get("model")
+
+print("4. Change values:")
+
+#Change the "year" to 2022:
+
+thisdict = {
+
+ "brand": "Ford",
+
+ "model": "Mustang",
+
+ "year": 1964
+
+}
+
+thisdict["year"] = 2022
+
+print("5.Print the number of items in the dictionary:")
+
+print(len(thisdict))
+
+print("empty dictionary")
+
+mydict = {}
+
+
+
+c) Source Code - Write a program to Create a tuple and perform the following 
+
+methods Add items, check for item in tuple, Access items & use len() 
+
+print("1. Create a tuple")
+
+thistuple = ("apple", "banana", "cherry")
+
+print(thistuple)
+
+print(“2.Add Items”)
+
+#Convert the tuple into a list, add "orange", and convert it back into a tuple:
+
+thistuple = ("apple", "banana", "cherry")
+
+y = list(thistuple)
+
+y.append("orange")
+
+thistuple = tuple(y)
+
+print(thistuple)
+
+print("3.Check if a tuple item exists")
+
+thistuple = ("apple", "banana", "cherry")
+
+if "apple" in thistuple:
+
+ print("Yes, 'apple' is in the fruits tuple")
+
+print("4.Access tuple items")
+
+thistuple = ("apple", "banana", "cherry")
+
+print(thistuple[1])
+
+print("Loop through a tuple")
+
+thistuple = ("apple", "banana", "cherry")
+
+for x in thistuple:
+
+ print(x)
+
+print("5.Get the length of a tuple ")
+
+thistuple = ("apple", "banana", "cherry")
+
+print(len(thistuple))
+
+
+
+a) Source Code – Write a program to show the use of lambda functions
+
+#Use lambda functions when an anonymous function is required for a short period of 
+
+time.
+
+double = lambda x: x * 2
+
+print(double(5))
+
+#Lambda functions can take any number of arguments: Addition argument a with 
+
+argument b and return the result:
+
+x = lambda a, b : a + b
+
+print(x(5, 6))
+
+
+b) Source Code – Write a program to filter out only the even items from a list using 
+
+Lamda function
+
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+new_list = list(filter(lambda x: (x%2 == 0) , my_list))
+
+print(new_list)
+
+
+c)Source Code – Write a Program to make a simple calculator using functions
+
+# This function adds two numbers
+
+def add(x, y):
+
+ return x + y
+
+# This function subtracts two numbers
+
+def subtract(x, y):
+
+ return x - y
+
+# This function multiplies two numbers
+
+def multiply(x, y):
+
+ return x * y
+
+# This function divides two numbers
+
+def divide(x, y):
+
+ return x / y
+
+print("Select operation.")
+
+print("1.Add")
+
+print("2.Subtract")
+
+print("3.Multiply")
+
+print("4.Divide")
+
+while True:
+
+ # Take input from the user
+
+ choice = input("Enter choice(1/2/3/4): ")
+
+ # Check if choice is one of the four options
+
+ if choice in ('1', '2', '3', '4'):
+
+ num1 = float(input("Enter first number: "))
+
+ num2 = float(input("Enter second number: "))
+
+ if choice == '1':
+
+ print(num1, "+", num2, "=", add(num1, num2))
+
+ elif choice == '2':
+
+print(num1, "-", num2, "=", subtract(num1, num2))
+
+ elif choice == '3':
+
+ print(num1, "*", num2, "=", multiply(num1, num2))
+
+ elif choice == '4':
+
+ print(num1, "/", num2, "=", divide(num1, num2))
+
+ break
+
+else:
+
+ print("Invalid Input")
+
+
+
+
+
+
+
+
+
+
+
